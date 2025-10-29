@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ ad.title }}</h1>
+<p><b>Категорія:</b> {{ ad.category.name }}</p>
+<p><b>Опис:</b> {{ ad.description }}</p>
+<p><b>Ціна:</b> {{ ad.price }} грн</p>
+<p><b>Створено:</b> {{ ad.created_at|date:'d.m.Y H:i' }}</p>
+<p><b>Оновлено:</b> {{ ad.updated_at|date:'d.m.Y H:i' }}</p>
+<p><b>Автор:</b> {{ ad.user.username }}</p>
+<a href="/">Назад до списку</a>
+{% endblock %}
